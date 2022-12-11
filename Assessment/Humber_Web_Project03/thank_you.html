@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 
+            Course: Web Programming and Design - ITC-5103
+            Project Phrase: #02
+            Author of this page: Wenhao Fang
+        -->
+    <title>Thank you</title>
+
+    <!-- Script link: jQuery -->
+    <script src="./js/jquery.js"></script>
+
+    <!-- Script link: main.js -->
+    <script src="./js/main.js"></script>
+
+    <!-- Link: Main.css File -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Embed style -->
+    <style>
+        main {
+            background-color: rgb(108, 117, 125);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <a href="./index.html">Ontario Tourism</a>
+        </div>
+
+        <nav class="navbar-container">
+            <a class="nav-link" href="./index.html"> Home </a>
+            <a class="nav-link" href="./attr01.html">CN Tower</a>
+            <a class="nav-link" href="./attr02.html">Royal Ontario Museum</a>
+            <a class="nav-link" href="./attr03.html">Niagara Falls</a>
+            <a class="nav-link" href="./about_us.html">About Us</a>
+        </nav>
+    </header>
+
+    <main class="main" style="height:95vh;display:flex;align-content: center;vertical-align: middle;">
+
+        <div class="modal" style="width: 380px;box-shadow: 10px 10px 5px #3d3d3d;">
+            <div class="modal-title"> Thank you </div>
+            <div class="modal-body">
+                Dear <span id="fname"></span>,<br>
+                Your survey has been submitted successfully. <br><br>
+                Redirect to the home page in <Strong id="second"></Strong> seconds.
+            </div>
+            <div class="modal-footer">
+                <form action="./index.html" method="get">
+                    <button class="btn-primary col-12" style="margin:0px" type="submit"> Ok</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        $("document").ready(function () {
+
+            //Gets the name.
+            var strUrl = window.location.href;
+            console.log(strUrl.indexOf("?"));
+            if (strUrl.indexOf("?") != -1) {//if the string has ?
+                var arrParam = listUrlParam(strUrl);//calls function to list Url Parameter;
+                if (arrParam["fname"] != "") {
+                    $("#fname").html(arrParam["fname"]);
+                } else {
+                    $("#fname").html("John Doe")
+                }
+            } else {
+                $("#fname").html("John Doe")
+            }
+
+
+            //Initiates the time to countdown.
+            var tSecond = 15000;
+            var currentSec = tSecond;
+            $("#second").html(tSecond / 1000);
+
+            //Update the remain seconds every second
+            setInterval(function () {
+                currentSec -= 1000;
+                $("#second").html(currentSec / 1000);
+            }, 1000);
+
+            // Countdown in 15 seconds.
+            setTimeout(function () {
+                window.location.href = "./index.html"
+            }, tSecond);
+        });
+
+
+    </script>
+
+</body>
+
+</html>
