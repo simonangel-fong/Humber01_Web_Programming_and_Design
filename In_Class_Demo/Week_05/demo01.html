@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <h2>Form demo</h2>
+    <form name="studentForm" action="submit_page.html" method="get">
+        <!-- <form name="studentForm" action="submit_page.html" method="post"> -->
+        <table>
+            <tr>
+                <td><label for="fn">First Name: </label></td>
+                <td><input type="text" name="fname" id="fn" maxlength="3" autofocus required></td>
+            </tr>
+            <tr>
+                <td> <label for="ln"> Last Name: </label></td>
+                <td><input type="text" name="lname" id="ln"></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">Password: </label></td>
+                <td><input type="password" name="password" placeholder="Enter minimun 8 characters" id="pwd"></td>
+            </tr>
+            <tr>
+                <td><label for="college">College: </label></td>
+                <td><input type="text" value="Humber College" id="college"></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age: </label></td>
+                <td><input type="number" name="age" id="age" min="18" max="50"></td>
+            </tr>
+            <tr>
+                <td><label for="date">Today's date: </label></td>
+                <td><input type="text" name="tdate" value="7th-Oct-22" disabled id="date"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">student Type</label>
+                </td>
+                <td>
+                    <input type="radio" name="stype" value="PT" id="pt">
+                    <label for="pt">Part-Time </label><br>
+                    <input type="radio" name="stype" value="FT" id="ft">
+                    <label for="ft">Full-Time </label><br>
+                    <input type="radio" name="stype" value="TS" id="ts">
+                    <label for="ts">Transferd student</label><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">student Hobbies</label>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Hobbies</legend>
+                        <input type="checkbox" name="sthobby1" value="jogging" id="jg">
+                        <label for="jg">Jogging </label><br>
+                        <input type="checkbox" name="sthobby2" value="football" id="fb">
+                        <label for="fb">Football </label><br>
+                        <input type="checkbox" name="sthobby3" value="baseball" id="bs">
+                        <label for="bs">Baseball</label><br>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cities:
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Cities</legend>
+                        <select name="city" id="" size="4" multiple>
+                            <optgroup label="Ontario">
+                                <option value="trt">Toronto</option>
+                                <option value="otw">Ottawa</option>
+                                <option value="msg">Mississauga</option>
+                            </optgroup>
+                            <optgroup label="Alberta">
+                                <option value="clg">Calgary</option>
+                                <option value="edt">Edmonton</option>
+                            </optgroup>
+                            <optgroup label="BC">
+                                <option value="vc">Vancouver</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comment:
+                </td>
+                <td>
+                    <textarea name="comment" id="" cols="100" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="em">Email:</label> </td>
+                <td><input type="email" id="em" name="email"></td>
+            </tr>
+            <tr>
+                <td><label for="url">URL:</label></td>
+                <td><input type="url" id="url" name="url"></td>
+            </tr>
+            <tr>
+                <td><label for="uf">Upload a file</label></td>
+                <td><input type="file" id="uf" name="file1"></td>
+            </tr>
+            <tr>
+                <td><label for="re">Rate your experience</label></td>
+                <td><input type="range" id="re" name="exp"></td>
+            </tr>
+            <tr>
+                <td><label for="search">Searh</label></td>
+                <td><input type="search" id="search" name="q"></td>
+            </tr>
+            <tr>
+                <td><label for="dt">Date time</label></td>
+                <td><input type="datetime" id="dt" name="datetime"></td>
+            </tr>
+            <tr>
+                <td><label for="dtl">Local Date time</label></td>
+                <td><input type="datetime-local" id="dtl" name="datetime"></td>
+            </tr>
+            <tr>
+                <td><label for="mon">Month</label></td>
+                <td><input type="month" id="mon" name="month"></td>
+            </tr>
+            <tr>
+                <td><label for="wk">Week</label></td>
+                <td><input type="week" id="wk" name="week"></td>
+            </tr>
+            <tr>
+                <td><label for="tm">Time</label></td>
+                <td><input type="time" id="tm" name="time"></td>
+            </tr>
+            <tr>
+                <td><label for="date">Date</label></td>
+                <td><input type="date" id="date" name="date"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+                <td>
+                    <input type="reset" value="Clear">
+                </td>
+                <td>
+                    <input type="button" value="Alert">
+                </td>
+                <td>
+                    <input type="image" src="img/puzzle1.jpg" alt="puzzle" height="50" width="50">
+                </td>
+                <td>
+                    <button>
+                        <img src="./img/puzzle1.jpg" alt="" height="50" width50>
+                        Add to cart
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

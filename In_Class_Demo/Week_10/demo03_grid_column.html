@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            border: 1px solid black;
+            display: grid;
+            /* grid-template-columns: 20% 20% 20% 20% 20%; */
+            /* grid-template-columns: auto auto auto auto auto; */
+            /* 是按比例分割 fraction*/
+            grid-template-columns: 1fr 3fr 4fr;
+
+            background-color: lightblue;
+        }
+
+        .container>div {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- this is container -->
+        <div> 1</div><!-- grid item-->
+        <div> 2</div><!-- grid item-->
+        <div> 3</div><!-- grid item-->
+        <div> 4</div><!-- grid item-->
+        <div> 5</div><!-- grid item-->
+        <div> 6</div><!-- grid item-->
+        <div> 7</div><!-- grid item-->
+        <div> 8</div><!-- grid item-->
+        <div> 9</div><!-- grid item-->
+        <div> 10</div><!-- grid item-->
+    </div>
+</body>
+
+</html>

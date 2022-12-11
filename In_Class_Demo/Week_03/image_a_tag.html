@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image tages and a href</title>
+</head>
+
+<body>
+    <h2>Anchor tag</h2>
+    <h3>my Favourite websites</h3>
+
+    <!-- the ul's property type is to define是句点还有方形-->
+    <ul type="square">
+        <li>
+            <a href="http:\\www.yahoo.com">Yahoo</a>
+        </li>
+        <li>
+            <a href="http:\\www.humber.ca">Humber</a>
+        </li>
+        <li>
+            <a href="http:\\www.humber.ca">Humber</a>
+        </li>
+    </ul>
+
+    <!-- 指向本地html文件 -->
+    <h3>Links to local link</h3>
+    <ol>
+        <li>
+            <!-- 注意：显示时如果使用/，则表示使用绝对路径，即从根目录即所在的分区开始；当部署时
+                由于根目录是站点域名，则不会报错 -->
+            <!-- 当指向的文件在父目录时，可以使用相对路径../ -->
+            <a href="section01/sectioning01.html">sectioning</a>
+        </li>
+    </ol>
+
+    <img src="../puzzle1.jpg" alt="puzzle image" height="200" width="50"/>
+</body>
+
+</html>

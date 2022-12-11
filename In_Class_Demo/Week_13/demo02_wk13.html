@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 02 Wk13</title>
+    <script src="./js/jquery.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $("document").ready(function () {
+            // $("p").css("border", "3px solid blue"); // 标签
+            // $("p:first").css("border", "3px solid red"); // 选择第一个成员
+            // $("p:last").css("border", "3px solid blue"); // 选择最后一个成员
+            $("p:odd").css("border", "3px solid green"); // 选择奇数成员
+            $("p:even").css("border", "3px solid lightgrey"); // 选择偶数成员
+            $("p:gt(1)").css("border", "3px solid yellow"); // 选择成员顺序大于2的成员
+            $("p:eq(3)").css("border", "3px solid black"); // 选择成员顺序等于4的成员
+
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1> jQuery Selectors</h1>
+
+    <div id="content">
+        <div id="example">
+            <p class="a">This is paragraph 1</p>
+            <p id="para1">This is paragraph 2</p>
+            <p class="b">This is paragraph 3</p>
+            <p id="para4" lang="en-us">This is paragraph 4</p>
+            <p id="para5" lang="en-gb">This is paragraph 5</p>
+        </div>
+
+        <p id="ronak">Hello from ronak!!</p>
+
+    </div>
+
+</body>
+
+</html>

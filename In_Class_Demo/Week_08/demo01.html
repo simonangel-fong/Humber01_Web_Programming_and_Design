@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #p1 {
+            font-weight: bold;
+            font-style: italic;
+            font-variant: small-caps;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+        }
+
+        #p2 {
+            /*left right center*/
+            text-align: center;
+            /* 下划线*/
+            text-decoration: underline;
+            /* 上划线*/
+            text-decoration: overline;
+            /*划线穿过*/
+            text-decoration: line-through;
+            /*适用两种,适用空格分隔*/
+            text-decoration: overline underline;
+            /*划线样式,波浪线*/
+            text-decoration-style: wavy;
+            /*划线颜色*/
+            text-decoration-color: red;
+        }
+
+        #p3 {
+            /* 文本方向: 直立*/
+            text-orientation: upright;
+            /* 书写模式: 从上到下 */
+            writing-mode: vertical-lr;
+        }
+
+        span {
+            /*垂直对齐文本的下标*/
+            vertical-align: sub;
+        }
+
+        h1 {
+            /* x-pos, y-pos, blur-effect color */
+            text-shadow: -30px -15px 5px red;
+
+        }
+
+        #p5{
+            /* 元素背景颜色 */
+            background-color: yellow;
+            /* 行高 */
+            line-height: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to Css Class</h1>
+    <p id="p1">This is para1</p>
+    <p id="p2">This is para2</p>
+    <p id="p3">Hello</p>
+    <p id="p5">How r u</p>
+    <p id="p4">Happy <span>Halloween</span>Everyone</p>
+</body>
+
+</html>

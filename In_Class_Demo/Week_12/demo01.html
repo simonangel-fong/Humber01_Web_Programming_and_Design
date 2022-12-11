@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wk12-Demo</title>
+</head>
+
+<body>
+
+    <h1>If Statement</h1>
+    <p id="result"></p>
+
+    <script>
+        var age
+        age = prompt("enter the age");
+        age = parseInt(age); //Convert input into a integer type, if fail return NaN.
+
+        if (!Number.isInteger(age)) {//Number.isInterger用来判断参数是否整数类型
+            document.getElementById("result").innerHTML = "You did not input integer"
+        } else if (age >= 18) {
+            document.getElementById("result").innerHTML = "You are eligible for a driver license.";
+        } else if (age == 16 || age == 17) {
+            document.getElementById("result").innerHTML = "You are eligible for a G1 driver license.";
+        } else {
+            document.getElementById("result").innerHTML = "You are not eligible for a driver license.";
+        }
+
+    </script>
+</body>
+
+</html>

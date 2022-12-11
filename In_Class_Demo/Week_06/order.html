@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- 
+        Course: Web Programming and Design - ITC-5103
+        Assignment/Exercise: Lab04
+        Date: 14-Oct-22 
+        Student Name: Wenhao Fang
+        Student No.:n01555914
+    -->
+
+    <title>Lab04 - Order</title>
+</head>
+
+<body>
+    <h1>Order From</h1>
+
+    <form action="survey.html" method="get">
+
+        <!-- member info -->
+        <fieldset>
+            <legend>Member Information</legend>
+            <table>
+                <tr>
+                    <td><label for="email">E-Mail:</label></td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td><label for="fname">First Name:</label></td>
+                    <td><input type="text" name="fname" id="fname"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name:</label></td>
+                    <td><input type="text" name="lname" id="lname"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- credit info -->
+        <fieldset>
+            <legend>Credit Card Information</legend>
+            <table>
+                <tr>
+                    <td><label for="ctype">Card Type:</label></td>
+                    <td>
+                        <select name="card_type" id="ctype">
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="american_express">American Express</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cnumber">Card Number:</label></td>
+                    <td><input type="text" name="card_number" id="cnumber" placeholder="16 digits" maxlength="16"></td>
+                </tr>
+                <tr>
+                    <td><label for="edate">Expiration date:</label></td>
+                    <!-- <td><input type="month" name="expired_date" id="edate"></td> -->
+                    <td>
+                        <!-- month -->
+                        <select name="expired_month" id="edate">
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+
+                        <!-- year -->
+                        <select name="expired_date" id="edate">
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <!-- submit -->
+        <fieldset>
+            <legend>Submit Your Order</legend>
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset Fields">
+            </div>
+        </fieldset>
+
+    </form>
+</body>
+
+</html>

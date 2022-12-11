@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        /* find li which has ancestor as main */
+        main li {
+            background-color: yellow;
+        }
+
+        footer li {
+            background-color: red;
+        }
+
+        /* div is immediate parent and h1 is imidiate child */
+        div>h1 {
+            background-color: pink;
+        }
+
+        /* immidiate sibling, 第一个符合的*/
+        /* h2+p {
+            background-color: aqua;
+        } */
+
+        /* general sibling */
+        h2~p {
+            background-color: silver
+        }
+
+        p[lang] {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        p[lang='en-gb'] {
+            font-style: italic;
+        }
+
+        h1,h2,p {
+            color: blue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p>This is p</p>
+        <div>
+            <h1>This is h1</h1>
+        </div>
+        <ul>
+            <li>Tea </li>
+            <li>Coffee </li>
+            <li>Milk </li>
+        </ul>
+
+        <h2>another heading</h2>
+        <!-- <span></span> -->
+        <p>This is p2</p>
+        <p lang="en-gb">para3</p>
+        <p lang="en-us">para4</p>
+        <div lang="en-us">Div eng</div>
+    </main>
+    <footer>
+        <h2>Footer</h2>
+        <ul>
+            <li>f1</li>
+            <li>f2</li>
+            <li>f3</li>
+        </ul>
+    </footer>
+</body>
+
+</html>

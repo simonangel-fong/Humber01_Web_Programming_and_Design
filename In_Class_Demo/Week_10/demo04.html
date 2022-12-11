@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container {
+            border: 1px solid black;
+            /* 使用grid设置布局,  */
+            display: grid;
+            /* 以下表示分为4列 */
+            /* grid-template-columns: 25% 50% 10% 5%; */
+            grid-template-columns: 25% 75%;
+            /* grid-template-areas: "h r"
+                                "m f"; */
+                                    
+            grid-template-areas: "h h"
+                                "r m"
+                                "f .";
+
+
+        }
+
+        #header {
+            background-color: lightgreen;
+            /* 注意没有双引号 */
+            grid-area: h;
+        }
+
+        #ref {
+            background-color: pink;
+            grid-area: r;
+
+        }
+
+        #main {
+            background-color: lightblue;
+            grid-area: m;
+
+        }
+
+        #footer {
+            background-color: yellow;
+            grid-area: f;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- this is container -->
+        <div id="header"> This is header</div><!-- grid item-->
+
+        <div id="ref">Reference</div><!-- grid item-->
+
+        <div id="main">main</div><!-- grid item-->
+
+        <div id="footer">footer</div><!-- grid item-->
+
+    </div>
+</body>
+
+</html>

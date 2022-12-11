@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+    <title>Demo-Function</title>
+</head>
+
+<body>
+    <h1>Function demo</h1>
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <button onclick="document.getElementById('para1').innerHTML = 'The result is ' + test03(5, 3);">test02</button>
+    <button onclick="bindMultiple('para2')">Multiplication</button>
+    <script>
+        // test01(); //calls a function
+        // test02(); //calls a function
+
+        document.write(test04(4));
+
+
+
+
+
+        function test01() {
+            document.write("Hello!");
+        }
+
+        function test02() {
+            document.getElementById("para1").innerHTML = "The result is " + test03(5, 3);
+        }
+
+        function test03(a, b) {
+            return a * b;
+        }
+
+        //create a function to convert F to c and return value; 5/9 *f-32
+        function test04(f) {
+            return ((5 / 9) * (f - 32));
+        }
+
+        function getMultiple() {
+            var a = prompt("a");
+            var b = prompt("b");
+            return (a * b);
+        }
+
+        function bindMultiple(id) {
+            document.getElementById(id).innerHTML = "The result of multiplication is " + getMultiple();
+        }
+
+    </script>
+</body>
+
+</html>

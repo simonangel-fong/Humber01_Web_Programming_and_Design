@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <!-- 
+        Course: Web Programming and Design - ITC-5103
+        Assignment/Exercise: Lab04
+        Date: 14-Oct-22 
+        Student Name: Wenhao Fang
+        Student No.:n01555914
+    -->
+
+    <title>Lab04 - Survey.html</title>
+</head>
+
+<body>
+    <form action="order.html" method="get">
+
+        <h2>Please complete our survey</h2>
+
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h3>Contact Information</h3>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="email">Email address:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="fname">First name:</label></td>
+                <td><input type="text" name="firstname" id="fname"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last name:</label></td>
+                <td><input type="text" name="lastname" id="lname"></td>
+            </tr>
+
+            <!-- geographic information -->
+            <tr>
+                <td colspan="2">
+                    <h3>Geographic Information</h3>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" name="state" id="state" maxlength="2" placeholder="Two characters"></td>
+            </tr>
+            <tr>
+                <td><label for="zip_code">Zip code:</label></td>
+                <td><input type="text" name="zip_code" id="zip_code" maxlength="5" placeholder="Five digits"></td>
+            </tr>
+
+            <!-- hear -->
+            <tr>
+                <td colspan="2">
+                    <h3>How did you hear about us?</h3>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="ws">Web Search:</label></td>
+                <td><input type="checkbox" name="hear" id="ws" value="web_search"></td>
+            </tr>
+            <tr>
+                <td><label for="fb">Facebook:</label></td>
+                <td><input type="checkbox" name="hear" id="fb" value="facebook"></td>
+            </tr>
+            <tr>
+                <td><label for="tw">Twitter:</label></td>
+                <td><input type="checkbox" name="hear" id="tw" value="twitter"></td>
+            </tr>
+            <tr>
+                <td><label for="em">Email message:</label></td>
+                <td><input type="checkbox" name="hear" id="em" value="email_message"></td>
+            </tr>
+
+            <!-- thank you -->
+            <tr>
+                <td colspan="2">
+                    <h3>Thank you for taking our survey!</h3>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>

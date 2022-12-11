@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <title>wk11_demo01</title>
+</head>
+
+<body>
+    <h1>This is demo</h1>
+    <p id="p1">THis is a para</p>
+    <p id="p2">THis is a para</p>
+
+    <script>
+        // document.write()
+        document.write("<strong>Hello</strong><br>");
+        document.write("Hello. How r u?");
+
+        // alert()
+        // alert("Hello!!");
+
+        // console.log()
+        console.log("This is console.");
+
+        // .getElementById().innerHTML
+        document.getElementById("p1").innerHTML = "How r u?";//set
+        console.log(document.getElementById("p1").innerHTML);//get
+
+        // .getElementById().append()
+        document.getElementById("p1").append(" hope you are doing fine.");
+
+        // single line comment//
+
+        /*
+            multiple lines comment
+        */
+
+        // variable
+        var a;
+        a = 10;
+        console.log(a);
+
+        var b = "hello";
+        console.log(b);
+
+        var d = "hello" + 2 + 6;
+        console.log(d); //hello26
+
+        var e = 2 + 6 + "hello";
+        console.log(e); //8hello
+        console.log("The value of e is " + e); //The value of e is 8hello
+
+
+    </script>
+</body>
+
+</html>
