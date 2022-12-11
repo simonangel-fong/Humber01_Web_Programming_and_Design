@@ -13,4 +13,4 @@
 - Project (Group#03)
   - [Phase#01](./Assessment/Humber_Web_Project/index.html)
   - [Phase#02](./Assessment/Humber_Web_Project02/index.html)
-  - [Phase#02](./Assessment/Humber_Web_Project03/index.html)
+  - [Phase#03](./Assessment/Humber_Web_Project03/index.html)
