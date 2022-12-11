@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 
+        Course: Web Programming and Design - ITC-5103
+        Project Phrase: #01
+        Programmer: Wenhao Fang
+    -->
+    <title>Ontario Tourism</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>Ontario Tourism</h1>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./attr01.html">CN Tower</a>
+            <a href="./attr02.html">Royal Ontario Museum</a>
+            <a href="./attr03.html">Niagara Falls</a>
+            <a href="./about_us.html">About us</a>
+
+            <!-- quick link -->
+            <form action="#" method="get" style=" float: right;">
+                <label>Quick links:</label>
+                <select name="age_range" id="select_attr" style="width: 300px;">
+                    <option value="attr01"><a href="./attr01.html">CN Tower</a></option>
+                    <option value="attr02"><a href="./attr02.html">Royal Ontario Museum</a></option>
+                    <option value="attr03"><a href="./attr03.html">Niagara Falls</a></option>
+                </select>
+                <button type="submit">Go >></button>
+            </form>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <table>
+            <!-- row: search -->
+            <tr valign="top">
+                <td width="300px" rowspan="4">
+
+                </td>
+                <td style="min-width: 800px;">
+                    <!-- image refference:[Destination Toronto] (https://www.destinationtoronto.com/hilton-ultimate-days/) -->
+                    <div style="min-width: 400px;min-height: 400px;border:2;align-content: center;">
+                        <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,g_xy_center,h_1440,q_65,w_2560,x_3425,y_527/v1/clients/toronto/16DD97_1_03ee2d97-25ea-4aeb-a9cd-d523f7caddf6.jpg"
+                            alt="home page cover" height="400px">
+                    </div>
+                    <hr>
+
+                </td>
+                <td width="300px" rowspan="4">
+            </tr>
+
+            <!-- row: listing attr -->
+            <tr>
+                <td>
+                    <!-- section: attr01 -->
+                    <section>
+                        <h4><a href="./attr01.html"> CN Tower </a></h4>
+                        <p maxlength="15">
+                            The CN Tower (French: Tour CN) is a 553.3 m-high (1,815.3 ft)
+                            concrete communications and observation tower in downtown
+                            Toronto, Ontario, CanadaBuilt on the former Railway Lands, it
+                            was completed in 1976... <br>
+                            <a href="./attr01.html"> More </a>
+                        </p>
+
+                    </section>
+                    <hr>
+                    <!-- section: attr01 -->
+                    <section>
+                        <h4><a href="./attr02.html"> Royal Ontario Museum </a></h4>
+                        <p>
+                            The Royal Ontario Museum (ROM) is a museum of art, world culture
+                            and natural history in Toronto, Ontario, Canada. It is one of
+                            the largest museums in North America and the largest in Canada.
+                            It attracts more than one million visitors every year, making
+                            the ROM the most-visited museum in Canada. ... <br>
+                            <a href="./attr02.html"> More </a>
+                        </p>
+                    </section>
+                    <hr>
+                    <!-- section: attr03 -->
+                    <section>
+                        <h4><a href="./attr03.html"> Niagara Falls</a></h4>
+                        <p>
+                            Niagara Falls (/naɪˈæɡərə/) is a group of three waterfalls at
+                            the southern end of Niagara Gorge, spanning the border between
+                            the province of Ontario in Canada and the state of New York in
+                            the United States. The largest of the three is Horseshoe Falls,
+                            which straddles the international border of the two countries.
+                            ... <br>
+                            <a href="./attr03.html"> More </a>
+                        </p>
+                    </section>
+                </td>
+            </tr>
+
+            <!-- search official website -->
+            <tr>
+                <td>
+                    <hr>
+                    Looking for more?<br>
+                    <!-- Using the get method to pass arguement to destinationontario.com -->
+                    <form action="https://www.destinationontario.com/en-ca/search/node" method="get">
+                        <input type="search" name="keys" id="kw" placeholder="Enter the attraction you are interested in."
+                            size="60px" style="height:30px">
+                        <button type="submit">Search</button>
+                        <button type="reset">Reset</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <hr>
+        <p> &copy; 2022 <a href="./about_us.html">Ontario Tourism</a>. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

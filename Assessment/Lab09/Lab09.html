@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab09</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="height:100vh;padding-top: 20px;">
+        <div class="row">
+            <div class="col-6">
+                <label class="form-label">First Name</label>
+                <input class="form-control" type="text" name="" id="fname">
+                <span id="vfname"></span>
+            </div>
+
+            <div class="col-6">
+                <label class="form-label">Last Name</label>
+                <input class="form-control" type="text" name="" id="lname">
+                <span id="vlname"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <label class="form-label">Mark #1</label>
+                <input class="form-control" type="text" name="" id="mark01">
+                <span id="vmark01"></span>
+            </div>
+
+            <div class="col-6">
+                <label class="form-label">Mark #2</label>
+                <input class="form-control" type="text" name="" id="mark02">
+                <span id="vmark02"></span>
+            </div>
+
+            <div class="col-6">
+                <label class="form-label">Mark #3</label>
+                <input class="form-control" type="text" name="" id="mark03">
+                <span id="vmark03"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <button class="btn-primary" id="validate" onclick="validate();">Validate</button>
+                <button class="btn-primary" id="print" onclick="print();">Print</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                Your grade is: <span id="result" style="color:black; font-weight: bold;"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //Assign html elements to variables.
+        var fname = document.getElementById("fname");
+        var lname = document.getElementById("lname");
+        var mark01 = document.getElementById("mark01");
+        var mark02 = document.getElementById("mark02");
+        var mark03 = document.getElementById("mark03");
+
+        var isValid = false;
+
+        /**
+         * Validates input values. 
+         * If input is not valid, warning message will display.
+         *  
+        */
+        function validate() {
+
+            //Validate first name
+            if (fname.value == "") {
+                document.getElementById("vfname").innerText = "First Name can't be empty!";
+            } else {
+                document.getElementById("vfname").innerText = "";
+            }
+
+            //Validate lasst name
+            if (lname.value == "") {
+                document.getElementById("vlname").innerText = "Last Name can't be empty!";
+            } else {
+                document.getElementById("vlname").innerText = "";
+            }
+
+            //Validate mark01
+            if (mark01.value == "") {//if input is empty
+                document.getElementById("vmark01").innerText = "Mark #01 can't be empty!";
+            } else if (!Number.isInteger(parseInt(mark01.value))) {//if input is not integer
+                document.getElementById("vmark01").innerText = "Mark #01 should be integer!";
+            } else if (parseInt(mark01.value) < 0 || parseInt(mark01.value) > 100) {//if input is out of range
+                document.getElementById("vmark01").innerText = "Mark #01 is out of range!";
+            } else {
+                document.getElementById("vmark01").innerText = "";
+            }
+
+            //Validate mark02
+            if (mark02.value == "") {
+                document.getElementById("vmark02").innerText = "Mark #02 can't be empty!";
+            } else if (!Number.isInteger(parseInt(mark02.value))) {
+                document.getElementById("vmark02").innerText = "Mark #02 should be integer!";
+            } else if (parseInt(mark02.value) < 0 || parseInt(mark02.value) > 100) {
+                document.getElementById("vmark02").innerText = "MMark #02 is out of range!";
+            } else {
+                document.getElementById("vmark02").innerText = "";
+            }
+
+            //Validate mark03
+            if (mark03.value == "") {
+                document.getElementById("vmark03").innerText = "Mark #03 can't be empty!";
+            } else if (!Number.isInteger(parseInt(mark03.value))) {
+                document.getElementById("vmark03").innerText = "Mark #03 should be integer!";
+            } else if (parseInt(mark03.value) < 0 || parseInt(mark03.value) > 100) {
+                document.getElementById("vmark03").innerText = "Mark #03 invalid number!";
+            } else {
+                document.getElementById("vmark03").innerText = "";
+            }
+        }
+
+        /**
+         * Prints the grade. 
+         * The grade depends on the average.
+         *  
+        */
+        function print() {
+            var avg = parseInt(parseInt(mark01.value) + parseInt(mark01.value) + parseInt(mark01.value)) / 3;
+
+            if (avg >= 90) {
+                document.getElementById("result").innerHTML = "Awesome";
+            } else if (avg >= 80) {
+                document.getElementById("result").innerHTML = "Very Good";
+            } else if (avg >= 50) {
+                document.getElementById("result").innerHTML = "OK";
+
+            } else {
+                document.getElementById("result").innerHTML = "Fail";
+            }
+        }
+    </script>
+</body>
+
+</html>

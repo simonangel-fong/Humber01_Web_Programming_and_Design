@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 
+        Course: Web Programming and Design - ITC-5103
+        Project Phrase: #02
+        Author of this page: Wenhao Fang
+    -->
+    <title>Survey</title>
+
+    <!-- Link: Main.css File -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Embed style -->
+    <style>
+        h1 {
+            margin: 20px auto 20px 20px;
+        }
+
+        .divider {
+            margin: 36px 12px 12px 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <a href="./index.html">Ontario Tourism</a>
+        </div>
+
+        <nav class="navbar-container">
+            <a class="nav-link" href="./index.html"> Home </a>
+            <a class="nav-link" href="./attr01.html">CN Tower</a>
+            <a class="nav-link" href="./attr02.html">Royal Ontario Museum</a>
+            <a class="nav-link" href="./attr03.html">Niagara Falls</a>
+            <a class="nav-link" href="./about_us.html">About Us</a>
+
+
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="home-image"
+            style="height:180px;background-image: url('https://www.leonschools.net/cms/lib/FL01903265/Centricity//Domain/9582/survey-banner.jpg');">
+        </div>
+        <div class="container" style="padding-top:30px;padding-bottom: 30px;">
+
+            <h1 style="margin-bottom: 1rem;">Survey</h1>
+
+            <form id="fm" action="./thank_you.html" method="get">
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="date">Date </label>
+                        <input class="form-control" type="text" name="tdate" value="20th-Oct-22" disabled id="date">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label" for="fn">First Name </label>
+                        <input class="form-control" type="text" name="fname" id="fn" placeholder="First Name" autofocus
+                            required>
+                    </div>
+
+                    <div class="col-4">
+                        <label class="form-label" for="ln"> Last Name </label>
+                        <input class="form-control" type="text" name="lname" id="ln" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label class="form-label" for="em">Email</label>
+                        <input class="form-control" type="email" id="em" name="email" placeholder="Email">
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="row" style="grid-gap: 20px 30px;">
+                    <div class="col-6">
+                        <h4 class="form-label" for="age">Age Group </h4>
+                        <select class="form-select" name="age_range" id="" size="3" multiple>
+                            <option value="minors">below 18</option>
+                            <option value="grownup">18 - 60</option>
+                            <option value="senior">above 60</option>
+                        </select>
+                    </div>
+
+                    <div class="col-6">
+                        <h4 class="form-label" for="City">City</h4>
+                        <select class="form-select" name="city" id="" size="6" multiple>
+                            <optgroup label="Ontario">
+                                <option value="trt">Toronto</option>
+                                <option value="otw">Ottawa</option>
+                                <option value="msg">Mississauga</option>
+                            </optgroup>
+                            <optgroup label="Alberta">
+                                <option value="clg">Calgary</option>
+                                <option value="edt">Edmonton</option>
+                            </optgroup>
+                            <optgroup label="BC">
+                                <option value="vc">Vancouver</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row" style="grid-gap: 20px 30px;">
+                    <div class="col-6">
+                        <h4 class="form-label" for="">Occupation</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stype" value="PT" id="pt">
+                            <label class="form-check-label" for="pt">Part-Time Job</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stype" value="FT" id="ft">
+                            <label class="form-check-label" for="ft">Full-Time Job</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="stype" value="UE" id="ue">
+                            <label class="form-check-label" for="ue">Unemployment</label>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <h4 class="form-label" for="">Favourite Tourism</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tourism1" value="sightseeing" id="ns">
+                            <label class="form-check-label" for="ns">Nature Sightseeing </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tourism2" value="history_site"
+                                id="hs">
+                            <label class="form-check-label" for="hs">Historical Sites </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tourism3" value="hiking" id="hk">
+                            <label class="form-check-label" for="hk">Hiking</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="tourism4" value="city advanture"
+                                id="ca">
+                            <label class="form-check-label" for="ca">City Advanture</label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="row">
+                    <div class="col-4">
+                        <h4 class="form-label" for="re">Rate your experience</h4>
+
+                        <select class="form-select" name="rate" id="select_rate">
+                            <option value="not_Satisfied">Not Satisfied</option>
+                            <option value="good">Good</option>
+                            <option value="satisfied">Satisfied</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="form-label">Leave your comment here:</h4>
+
+                        <textarea class="form-control" name="comment" id="" rows="6"></textarea>
+                    </div>
+                </div>
+
+                <!-- <hr class="divider"> -->
+
+                <div class="row" style="margin: 10px 0px;">
+                    <div class="col-12">
+                        <button class="btn-primary" type="submit">Submit</button>
+                        <button class="btn-secondary" type="reset">Reset</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div>Copyright &copy; <a href="./about_us.html"> Ontario Tourism</a> 2022
+
+            <!-- quick link -->
+            <select name="age_range" id="select_attr" class="quick-link">
+                <option value="">--- Quick Link ---</option>
+                <option value="attr01">CN Tower</option>
+                <option value="attr02">Royal Ontario Museum</option>
+                <option value="attr03">Niagara Falls</option>
+            </select>
+        </div>
+    </footer>
+</body>
+
+</html>

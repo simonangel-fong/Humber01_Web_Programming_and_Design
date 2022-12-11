@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 
+        Course: Web Programming and Design - ITC-5103
+        Project Phrase: #01
+        Programmer: Wenhao Fang
+    -->
+    <title>Survey</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>Ontario Tourism</h1>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./attr01.html">CN Tower</a>
+            <a href="./attr02.html">Royal Ontario Museum</a>
+            <a href="./attr03.html">Niagara Falls</a>
+            <a href="./about_us.html">About us</a>
+        </nav>
+        <!-- <hr> -->
+    </header>
+
+    <main>
+        <form action="./thank_you.html" method="get">
+            <table>
+                <!-- row: search -->
+                <tr valign="top">
+                    <td width="300px" rowspan="3">
+                        <!-- sidebar for menu-->
+                        Menu
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./attr01.html">CN Tower</a></li>
+                            <li><a href="./attr02.html">Royal Ontario Museum</a></li>
+                            <li><a href="./attr03.html">Niagara Falls</a></li>
+                        </ul>
+                    </td>
+                    <td style="min-width: 800px;">
+                        <h2>Survey</h2>
+                    </td>
+                    <td width="300px" rowspan="3">
+                </tr>
+
+                <!-- row: home page cover -->
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><label for="date">Date: </label></td>
+                                <td><input type="text" name="tdate" value="20th-Oct-22" disabled id="date"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="fn">First Name: </label></td>
+                                <td><input type="text" name="fname" id="fn" maxlength="20" placeholder="First Name"
+                                        autofocus required> </td>
+                            </tr>
+                            <tr>
+                                <td> <label for="ln"> Last Name: </label></td>
+                                <td><input type="text" name="lname" id="ln" maxlength="20" placeholder="Last Name">
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td> <label for="em">Email:</label> </td>
+                                <td><input type="email" id="em" name="email" placeholder="Email"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="age">Age Group: </label></td>
+                                <td>
+                                    <select name="age_range" id="" size="4" multiple>
+                                        <option value="minors">below 18</option>
+                                        <option value="grownup">18 - 60</option>
+                                        <option value="senior">above 60</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    Cities:
+                                </td>
+                                <td>
+                                    <select name="city" id="" size="4" multiple>
+                                        <optgroup label="Ontario">
+                                            <option value="trt">Toronto</option>
+                                            <option value="otw">Ottawa</option>
+                                            <option value="msg">Mississauga</option>
+                                        </optgroup>
+                                        <optgroup label="Alberta">
+                                            <option value="clg">Calgary</option>
+                                            <option value="edt">Edmonton</option>
+                                        </optgroup>
+                                        <optgroup label="BC">
+                                            <option value="vc">Vancouver</option>
+                                        </optgroup>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="">Occupation</label>
+                                </td>
+                                <td>
+                                    <fieldset>
+                                        <legend>Occupation</legend>
+                                        <input type="radio" name="stype" value="PT" id="pt">
+                                        <label for="pt">Part-Time Job</label>
+                                        <input type="radio" name="stype" value="FT" id="ft">
+                                        <label for="ft">Full-Time Job</label>
+                                        <input type="radio" name="stype" value="UE" id="ue">
+                                        <label for="ue">Unemployment</label>
+                                    </fieldset>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <label for="">Favourite Tourism</label>
+                                </td>
+                                <td>
+                                    <fieldset>
+                                        <legend>Tourism</legend>
+                                        <input type="checkbox" name="tourism1" value="sightseeing" id="ns">
+                                        <label for="ns">Nature Sightseeing </label>
+                                        <input type="checkbox" name="tourism2" value="history_site" id="hs">
+                                        <label for="hs">Historical Sites </label><br>
+                                        <input type="checkbox" name="tourism3" value="hiking" id="hk">
+                                        <label for="hk">Hiking</label>
+                                        <input type="checkbox" name="tourism4" value="city advanture" id="ca">
+                                        <label for="ca">City Advanture</label>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="re">Rate your experience</label></td>
+                                <td>
+                                    <select name="rate" id="select_rate">
+                                        <option value="not_Satisfied">Not Satisfied</option>
+                                        <option value="good">Good</option>
+                                        <option value="satisfied">Satisfied</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    <h4>Please leave your comment here:</h4>
+                                    <textarea name="comment" id="" cols="100" rows="10"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+
+                <!-- row: listing attr -->
+                <tr>
+                    <hr>
+
+                    <td>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+
+    <footer>
+        <hr>
+        <p>Copyright &copy; <a href="./about_us.html">Ontario Tourism</a> 2022</p>
+    </footer>
+</body>
+
+</html>

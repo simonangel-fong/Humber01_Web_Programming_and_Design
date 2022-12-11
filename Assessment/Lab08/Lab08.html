@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lab08</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div style="height:300px;padding:30px auto 30px auto;text-align: center;">
+            <img id="pic" src="" alt="" style="height:100%;padding:10px auto 10px auto">
+            <p id="description" style="text-align: left;"></p>
+            <div style="padding:30px auto 30px auto;text-align: center;">
+                <button id="halloween" class="btn-primary" onclick="displayHalloween();">Halloween</button>
+                <button id="christmas" class="btn-primary" onclick="displayChristmas();">Christmas</button>
+                <button id="newYear" class="btn-primary" onclick="displayNewYear();">New Year</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //customized text output
+        var textHalloween = "Halloween is a holiday celebrated each year on October 31.<br>\
+                    and Halloween 2022 will occur on Monday, October 31.";
+
+        var textChristmas = "Christmas is an annual festival commemorating the birth of Jesus Christ, <br>\
+                    observed primarily on December 25 as a religious and cultural celebration among billions of people around the world.";
+
+        var textNewYear = "New Year is the time or day currently at which a new calendar year begins and the calendar's year count increments by one.<br> \
+                    Many cultures celebrate the event in some manner.";
+
+        //three functions
+        function displayHalloween() {
+            document.getElementById("pic").setAttribute("src", "./img/halloween.png");
+            document.getElementById("description").innerHTML = textHalloween;
+        }
+
+        function displayChristmas() {
+            document.getElementById("pic").setAttribute("src", "./img/christmas.png");
+            document.getElementById("description").innerHTML = textChristmas;
+        }
+
+        function displayNewYear() {
+            document.getElementById("pic").setAttribute("src", "./img/newYear.png");
+            document.getElementById("description").innerHTML = textNewYear;
+        }
+
+    </script>
+</body>
+
+</html>

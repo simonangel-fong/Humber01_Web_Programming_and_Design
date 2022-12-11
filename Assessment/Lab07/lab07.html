@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Lab 07</title>
+    <style>
+        /* main: padding */
+        main {
+            padding-left: 200px;
+        }
+
+        /* title: bold, 1.2em size */
+        #title {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        /* W: 1.5em size */
+        #title>span {
+            font-size: 1.5em;
+        }
+
+        /* nav: float */
+        nav {
+            width: 200px;
+            float: left;
+            /* margin-bottom: 800px; */
+        }
+
+        /* link color: orange */
+        a:link {
+            color: orange;
+            font-weight: bold;
+        }
+
+        /* picture */
+        #pic {
+            width: 200px;
+            height: 150px;
+            /* border: 1px solid gray; */
+            background-image: url(./img/cat1.jpg);
+            background-repeat: no-repeat;
+            /* margin-left: 200px; */
+        }
+
+        /* No questions asked: bold */
+        footer span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- links -->
+            <ul>
+                <li><a href="#">Props</a> </li>
+                <li><a href="#">Costumes</a></li>
+                <li><a href="#">Special Effects</a></li>
+                <li><a href="#">Masks</a></li>
+            </ul>
+        </nav>
+
+        <p id="title"><span>W</span>elcome to my site. <br>Please come in and stay awhile.</p>
+    </header>
+
+    <main>
+        <section>
+            <p> I started this web site because Halloween has always been favorite holiday. But during the last year, I
+                started selling some of my favorite Halloween products, and they've become quite a hit.
+            </p>
+
+            <p> If you click on the personal link, you can browse my favorite Halloween pictures, stories, and films.
+                And if
+                you join my email list, I will keep you up-to-date on all things Halloween.
+            </p>
+
+        </section>
+
+        <section>
+            <h3>Product of the week</h3>
+            <div id="pic"></div>
+
+            <a href="#">20" Deranged Cat</a>
+
+        </section>
+
+        <footer>
+            <h3>My guarantee</h3>
+            <p>If you aren't completely satisfied with everyting you buy from my site, you can return it for a full
+                refund. <span>No questions asked!</span></p>
+        </footer>
+    </main>
+
+</body>
+
+</html>

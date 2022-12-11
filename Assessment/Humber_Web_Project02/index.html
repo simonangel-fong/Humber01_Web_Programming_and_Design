@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 
+        Course: Web Programming and Design - ITC-5103
+        Project Phrase: #02
+        Author of this page: Wenhao Fang
+    -->
+    <title>Ontario Tourism</title>
+    <!-- Link: Main.css File -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Embed style -->
+    <style>
+        #form_search input {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            width: 100%;
+            padding: 6px 12px 6px 12px;
+            border: 0px;
+            margin: 0px;
+        }
+
+        #form_search input:active {
+            border-color: rgb(207, 212, 218);
+        }
+
+        #search_bar {
+            width: 75%;
+            display: flex;
+            padding: 0px;
+            border: 1px solid rgb(0, 0, 0);
+            align-content: center;
+        }
+
+        #search_bar button,
+        #search_bar button:link,
+        #search_bar button:visited,
+        #search_bar button:active {
+            font-size: 1rem;
+            font-weight: 400;
+            text-decoration: none;
+            color: rgb(33, 37, 41);
+            background-color: rgb(207, 212, 218);
+            vertical-align: middle;
+            padding: 10px 30px 6px 30px;
+            border: 0px;
+            margin: 0px;
+        }
+
+        #search_bar button:hover {
+            color: #adb5bd;
+            background-color: rgb(33, 37, 41);
+        }
+
+        .divider {
+            margin: 60px 12px 60px 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <a href="./index.html">Ontario Tourism</a>
+        </div>
+
+        <nav class="navbar-container">
+            <a class="nav-link" href="./index.html"> Home </a>
+            <a class="nav-link" href="./attr01.html">CN Tower</a>
+            <a class="nav-link" href="./attr02.html">Royal Ontario Museum</a>
+            <a class="nav-link" href="./attr03.html">Niagara Falls</a>
+            <a class="nav-link" href="./about_us.html">About Us</a>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <div class="home-image"
+            style="background-image: url('https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,g_xy_center,h_1440,q_65,w_2560,x_3425,y_527/v1/clients/toronto/16DD97_1_03ee2d97-25ea-4aeb-a9cd-d523f7caddf6.jpg');">
+            <div class="home-heading">
+                Ontario Tourism</div>
+        </div>
+
+        <div class="container" style="padding:60px 0px 60px 0px">
+            <!-- CN Tower -->
+            <section style="display:grid;grid-template-columns: 60% 40%;">
+
+                <div class="section-container">
+                    <div class="section-title">
+                        <a href="./attr01.html"> CN Tower </a>
+                    </div>
+                    <div class="section-content">
+                        The CN Tower (French: Tour CN) is a 553.3 m-high (1,815.3 ft)
+                        concrete communications and observation tower in downtown
+                        Toronto, Ontario, CanadaBuilt on the former Railway Lands, it
+                        was completed in 1976... <br>
+                        <a href="./attr01.html"> More </a>
+
+                    </div>
+                </div>
+
+                <div class="section-img">
+                    <img src="./img/index/CN TOWER.jpg" alt="cn tower" width="100%" height="100%">
+                </div>
+
+            </section>
+
+            <hr class="divider">
+
+            <!-- Royal Ontario Museum -->
+            <section style="display:grid;grid-template-columns: 40% 60%;">
+
+                <div class="section-img">
+                    <img src="./img/index/Royal_Ontario_Museum.jpg" alt="Royal Ontario museum" width="100%"
+                        height="100%">
+                </div>
+
+                <div class="section-container">
+                    <div class="section-title">
+                        <a href="./attr02.html"> Royal Ontario Museum </a>
+                    </div>
+                    <div class="section-content">
+                        The Royal Ontario Museum (ROM) is a museum of art, world culture
+                        and natural history in Toronto, Ontario, Canada. It is one of
+                        the largest museums in North America and the largest in Canada.
+                        It attracts more than one million visitors every year, making
+                        the ROM the most-visited museum in Canada. ... <br>
+                        <a href="./attr02.html"> More </a>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <hr class="divider">
+
+            <!-- Niagara Falls -->
+            <section style="display:grid;grid-template-columns: 60% 40%;">
+
+                <div class="section-container">
+                    <div class="section-title">
+                        <a href="./attr01.html"> Niagara Falls </a>
+                    </div>
+                    <div class="section-content">
+                        Niagara Falls (/naɪˈæɡərə/) is a group of three waterfalls at
+                        the southern end of Niagara Gorge, spanning the border between
+                        the province of Ontario in Canada and the state of New York in
+                        the United States. The largest of the three is Horseshoe Falls,
+                        which straddles the international border of the two countries.
+                        ... <br>
+                        <a href="./attr03.html"> More </a>
+                    </div>
+                </div>
+
+                <div class="section-img">
+                    <img src="./img/attr03/Niagara Falls.jpg" alt="cn tower" width="100%" height="100%">
+                </div>
+
+            </section>
+
+            <hr class="divider">
+
+            <!-- Search official website -->
+            <section>
+                <div class="section-container" style="text-align:center;">
+
+                    <div class="section-title">
+                        Looking for more?
+                    </div>
+
+                    <div class="section-content">
+                        <!-- Using the get method to pass arguement to destinationontario.com -->
+                        <form id="form_search" action="https://www.destinationontario.com/en-ca/search/node"
+                            method="get" style="display:flex;justify-content:center ;">
+                            <div id="search_bar">
+                                <input type="search" name="keys" id="kw" placeholder="Search Attractions...">
+                                <button type="submit">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                        class="bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div>
+            Copyright &copy; <a href="./about_us.html"> Ontario Tourism</a> 2022
+            <!-- quick link -->
+            <select name="age_range" id="select_attr" class="quick-link">
+                <option value="">--- Quick Link ---</option>
+                <option value="attr01">CN Tower</option>
+                <option value="attr02">Royal Ontario Museum</option>
+                <option value="attr03">Niagara Falls</option>
+            </select>
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+/*!
+ * Main CSS File
+ * Assignment No.: Group Project Task02
+ * Course Name: Web Programming and Design
+ * Course No.: Humber ITC-5103-0GC
+ * Team Name (Group No.): Ontario tourism (Group 03)
+ * Team Member: Hamed Tara, Ramakrishna Likith Buddavarapu, Wenhao Fang
+ */
+
+/* Codes by Wenhao Fang
+---------------------------------------------------- */
+
+body {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #eaeef1b2;
+  margin: 0;
+}
+
+/* Header navbar
+  -------------------------------------------------- */
+
+.navbar {
+  height: 50px;
+  color: rgb(90, 90, 90);
+  background-color: rgb(33, 37, 41);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "brand container";
+  z-index: 1;
+}
+
+.navbar-brand {
+  height: 30px;
+  grid-area: brand;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 10px 20px 10px 20px;
+}
+
+.navbar a:link,
+.navbar a:visited,
+.navbar a:active {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar-container {
+  grid-area: container;
+  display: flex;
+  padding: 10px 20px 10px 20px;
+}
+
+.nav-link {
+  padding: 0px 10px 0px 10px;
+}
+
+/* Main
+  -------------------------------------------------- */
+
+.main {
+  padding-top: 50px;
+}
+
+.home-image {
+  height: 512px;
+  /* background-image: url("https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,g_xy_center,h_1440,q_65,w_2560,x_3425,y_527/v1/clients/toronto/16DD97_1_03ee2d97-25ea-4aeb-a9cd-d523f7caddf6.jpg"); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  z-index: -3;
+}
+
+.home-heading {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 3.5rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 3px 3px rgba(90, 90, 90, 0.5);
+  line-height: 3rem;
+  width: 75%;
+  position: relative;
+  left: 100px;
+  top: 100px;
+  z-index: 0;
+}
+
+.container {
+  background-color: #f8f9fa;
+  width: auto;
+  padding: 0 10px 0 10px;
+  margin: 0 15% 0 15%;
+}
+
+.section-container {
+  width: auto;
+  margin: 0 15px 0 15px;
+}
+
+.section-title {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgb(33, 37, 41);
+  padding: 0 10px 0 10px;
+  margin-bottom: 20px;
+}
+
+.section-title a,
+.section-title a:link,
+.section-title a:visited,
+.section-title a:active {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+}
+
+.section-title a:hover {
+  color: rgba(33, 37, 41, 0.9);
+  border-bottom: 3px solid gray;
+}
+
+.section-content {
+  display: block;
+  font-size: 1.1rem;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 30px;
+  color: rgb(108, 117, 125);
+  padding: 0 10px 0 10px;
+}
+
+.section-img {
+  /* display: block; */
+  margin: 60px 20px 0 20px;
+  box-shadow: 10px 10px 5px #888888;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+/* Form
+  -------------------------------------------------- */
+.row {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 8px 0px 8px;
+}
+
+.m-3 {
+  margin: 18px 18px 18px 18px;
+}
+
+.my-4 {
+  margin: 24px 0px 24px 0px;
+}
+
+.my-6 {
+  margin: 36px 0px 36px 0px;
+}
+
+.col-3 {
+  width: 25%;
+  padding: 0px 8px 0px 8px;
+  margin: 16px 0px 0px 0px;
+}
+
+.col-4 {
+  width: 33.3%;
+  padding: 0px 8px 0px 8px;
+  margin: 16px 0px 0px 0px;
+}
+
+.col-6 {
+  width: 50%;
+  padding: 0px 8px 0px 8px;
+  margin: 16px 0px 0px 0px;
+}
+
+.col-9 {
+  width: 75%;
+  padding: 0px 8px 0px 8px;
+  margin: 16px 0px 0px 0px;
+}
+
+.col-12 {
+  width: 100%;
+  padding: 0px 8px 0px 8px;
+  margin: 16px 0px 0px 0px;
+}
+
+.form-label {
+  display: inline-block;
+  margin: 0px 0px 10px 0px;
+}
+
+.form-control {
+  display: block;
+  box-sizing: border-box;
+  font-size: 1rem;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 6px 12px 6px 12px;
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 4px;
+  margin: 0px;
+}
+
+.form-select {
+  display: block;
+  font-size: 1rem;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  padding: 6px 12px 6px 12px;
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 4px;
+  margin: 0px;
+}
+
+.form-check {
+  padding: 0px 0px 0px 24px;
+  margin: 0px 0px 5px 0px;
+}
+
+.form-check-input {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+  width: 1rem;
+  height: 1rem;
+  padding: 0px;
+  margin: 4px 0px 0px -24px;
+}
+
+.form-check-label {
+  display: inline-block;
+}
+
+button.btn-primary {
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(13, 110, 253);
+  vertical-align: middle;
+  padding: 6px 12px;
+  border: 1px solid rgb(13, 110, 253);
+  border-radius: 4px;
+  margin: 4px 2px;
+}
+
+button.btn-primary:hover {
+  background-color: rgb(11, 86, 199);
+}
+
+button.btn-secondary {
+  font-size: 1.1rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(108, 117, 125);
+  vertical-align: middle;
+  padding: 6px 12px;
+  border: 1px solid rgb(108, 117, 125);
+  border-radius: 4px;
+  margin: 4px 2px;
+}
+
+button.btn-secondary:hover {
+  background-color: rgb(102, 104, 105);
+}
+
+/* Modal
+  -------------------------------------------------- */
+
+.modal {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  background-color: azure;
+  border: 2px solid rgb(102, 104, 105);
+  border-radius: 16px;
+  margin: auto auto;
+}
+
+.modal-title {
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 16px;
+}
+
+.modal-body {
+  font-family: "Courier New", Courier, monospace;
+  line-height: 24px;
+  color: rgb(33, 37, 41);
+  padding: 0px 16px;
+}
+
+.modal-footer {
+  padding: 16px;
+}
+
+/* Footer
+  -------------------------------------------------- */
+.footer {
+  height: 55px;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2rem;
+  background-color: #f8f9fa;
+  padding: 6px 12px 6px 12px;
+  border: 0px;
+  margin: 0px 15%;
+}
+
+.footer div {
+  margin: 6px 0px;
+  padding: 12px 0px;
+  border-top: 1px solid rgb(102, 104, 105);
+}
+
+.quick-link {
+  font-size: 0.8rem;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px 30px 0px auto;
+  width: 250px;
+  float: right;
+  background-color: rgb(255, 255, 255);
+  padding: 6px 36px 6px 12px;
+  border-radius: 6px;
+  border-color: rgb(163, 195, 239);
+}
+
+/* End of codes by Wenhao Fang
+  -------------------------------------------------- */
