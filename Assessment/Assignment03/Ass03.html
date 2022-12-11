@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- 
+        Name: Wenhao Fang 
+        ID: n01555914
+    -->
+    <title>Assignment 03</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        h1 {
+            margin-left: 20px;
+        }
+
+        h2 {
+            margin-left: 20px;
+        }
+
+        hr {
+            margin: 20px 20px 30px 20px;
+        }
+
+        span.valid-msg {
+            margin-left: 10px;
+            font-size: 0.9rem;
+            color: red;
+        }
+
+        span.outcome {
+            text-align: right;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="min-height:100vh;padding: 20px 10px 30px 10px;">
+
+        <h1>Assignment 03</h1>
+
+        <h2>Customer Information</h2>
+        <section class="section-container">
+            <div class="row">
+                <div class="col-6">
+                    <label class="form-label">First Name</label>
+                    <input class="form-control" type="text" name="" id="fname">
+                    <span class="valid-msg" id="vfname"></span>
+                </div>
+
+                <div class="col-6">
+                    <label class="form-label">Last Name</label>
+                    <input class="form-control" type="text" name="" id="lname">
+                    <span class="valid-msg" id="vlname"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <label class="form-label">Phone Number</label>
+                    <input class="form-control" type="tel" name="" id="phone">
+                    <span class="valid-msg" id="vphone"></span>
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <h2>Order Detail</h2>
+        <section class="section-container" style="display: block;">
+            <div class="row"
+                style="display:grid;grid-template-columns: 30% 40% 30%; grid-template-areas: 'label input valid';">
+                <label class="form-label" style="grid-area: label;">Product 1 ($30.00 per unit):</label>
+                <!-- <input class="form-control" type="number" max="100" min="0" name="" id="numOfPro01"
+                    style="grid-area: input;"> -->
+                <input class="form-control" type="text" name="" id="numOfPro01" style="grid-area: input;">
+                <span class="valid-msg" id="vnumOfPro01" style="grid-area: valid;">
+            </div>
+
+            <div class="row"
+                style="display:grid;grid-template-columns: 30% 40% 30%; grid-template-areas: 'label input valid';">
+                <label class="form-label" style="grid-area: label;">Product 2 ($20.00 per unit):</label>
+                <input class="form-control" type="text" name="" id="numOfPro02" style="grid-area: input;">
+                <span class="valid-msg" id="vnumOfPro02" style="grid-area: valid;">
+            </div>
+
+            <div class="row"
+                style="display:grid;grid-template-columns: 30% 40% 30%; grid-template-areas: 'label input valid';">
+                <label class="form-label" style="grid-area: label;">Product 3 ($50.00 per unit):</label>
+                <input class="form-control" type="text" name="" id="numOfPro03" style="grid-area: input;">
+                <span class="valid-msg" id="vnumOfPro03" style="grid-area: valid;">
+            </div>
+
+            <div class="row">
+                <i style="font-size: 1rem;">Note: Please input integer numbers in the range of 0 and 100.</i>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section class="section-container">
+            <div class="row">
+                <div style="text-align: right;margin-left: auto;">
+                    <div style="padding: 5px;margin: 5px;">
+                        Cost: <Strong>$&nbsp;&nbsp;</Strong><span class="outcome" id="cost">0</span><br>
+                        Tax: <Strong>$&nbsp;&nbsp;</Strong><span class="outcome" id="tax">0</span><br>
+                    </div>
+                    <div style="padding: 5px;border-top: 2px solid grey;margin: 5px;">
+                        Total: <Strong>$&nbsp;&nbsp;</Strong><span class="outcome" id="total">0</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="row">
+            <!-- On click on Calculate button : -->
+            <button class="btn-primary" onclick="calculate();" style="margin-left: auto;">Calculate</button>
+            <!-- <button class="btn-primary" onclick="test();">Test</button> -->
+        </div>
+    </div>
+
+
+
+    <script>
+
+        //#region Called Function
+
+        function test() {
+            console.log("tset");
+            // isInt("numOfPro01", "vnumOfPro01", "msg");
+            // isRange("numOfPro01", 0, 100, "vnumOfPro01", "msg1");
+            // checkNum("numOfPro01", 0, 100, "vnumOfPro01", "msg0", "msg1", "msg2");
+        }
+
+        /**
+         * Validates input values. 
+         * If input is not valid, warning message will display.
+         *  
+        */
+        function validate() {
+            //Validate Personal Info
+            checkNull("fname", "vfname", "First Name can't be empty!")
+            checkNull("lname", "vlname", "Last Name can't be empty!")
+            checkNull("phone", "vphone", "Telephone can't be empty!")
+
+            //Validate amounts
+            checkNum("numOfPro01", 0, 100, "vnumOfPro01", "Product #01's amount is required!", "An Integer is required!", "Interger between 0 and 100 is required!")
+            checkNum("numOfPro02", 0, 100, "vnumOfPro02", "Product #02's amount is required!", "An Integer is required!", "Interger between 0 and 100 is required!")
+            checkNum("numOfPro03", 0, 100, "vnumOfPro03", "Product #03's amount is required!", "An Integer is required!", "Interger between 0 and 100 is required!")
+
+            var result = false;
+            var msgs = document.getElementsByClassName("valid-msg");
+            for (var i = 0; i < msgs.length; i++) {
+
+                // console.log(msgs[i].innerHTML);
+                // console.log(msgs[i].innerHTML.length);
+
+                if (msgs[i].innerHTML.length == 0) {
+                    result = true;
+                } else {
+                    result = false;
+                    break;
+                }
+            }
+            console.log(result);
+            return result;
+        }
+
+
+        /**
+         * Calculates the cost and tax.
+         * All inpute value will be validated before calculation.
+         * 
+        */
+        function calculate() {
+            /*
+                All the fields will be validated using Java script Like first name last name phone number,
+                Prod1 amount, prod 2 amount , prod 3 amount and then total will be displayed either on label or text box.
+            
+              */
+            if (validate()) {
+                let value01 = document.getElementById("numOfPro01").value;
+                let value02 = document.getElementById("numOfPro02").value;
+                let value03 = document.getElementById("numOfPro03").value;
+
+                let cost = 30 * value01 + 20 * value02 + 50 * value03;
+                let tax = cost * 0.13;//Once that is done Add 13% tax on it and show total with tax in separate label or textbox
+                let total = cost + tax;
+
+                document.getElementById("cost").innerHTML = cost;
+                document.getElementById("tax").innerHTML = tax;
+                document.getElementById("total").innerHTML = total;
+            }
+        }
+
+
+        //#endregion
+
+        //#region General Functions
+
+        function isNullInput(elementID, msgID, msg) {
+            if (document.getElementById(elementID).value == "") {
+                document.getElementById(msgID).innerText = msg;
+                return false;
+            } else {
+                document.getElementById(msgID).innerText = "";
+                return true;
+            }
+        }
+
+
+        function isInteger(elementID, msgID, msg) {
+            // let result = false;
+            let value = document.getElementById(elementID).value;
+
+            if (!Number.isInteger(parseInt(value))) {
+                document.getElementById(msgID).innerText = msg;
+                return false;
+            } else {
+                document.getElementById(msgID).innerText = "";
+                return true;
+            }
+        }
+
+
+        function isRange(elementID, minVal, maxVal, msgID, msg) {
+            let value = document.getElementById(elementID).value;
+
+            if (parseInt(value) < minVal || parseInt(value) > maxVal) {//if input is out of range
+                document.getElementById(msgID).innerText = msg;
+                return false;
+            } else {
+                document.getElementById(msgID).innerText = "";
+                return true;
+            }
+        }
+
+
+        function checkNull(elementID, msgID, msg) {
+            isNullInput(elementID, msgID, msg);
+        }
+
+
+        function checkNum(elementID, minVal, maxVal, msgID, msgNull, msgInt, msgRng) {
+            let isNotNull = isNullInput(elementID, msgID, msgNull);
+
+            if (isNotNull) {
+                let isInt = isInteger(elementID, msgID, msgInt);
+                if (isInt) {
+                    // console.log(isRange(elementID, minVal, maxVal, msgID, msgRng));
+
+                    isRange(elementID, minVal, maxVal, msgID, msgRng);
+                }
+            }
+        }
+
+        //#endregion
+
+    </script>
+</body>
+
+</html>
